@@ -1,27 +1,61 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html, body{
+  width: 100%;
+  height: 100%;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.nav{
+  background-color: rgba(3,37,65,1) !important;
+  padding: 10px 20px !important;
 }
+
+.nav>a{
+  font-weight: 500;
+}
+
+.text-white{
+  color: white !important;
+}
+
+.text-black{
+  color: black !important;
+}
+
+.logo_heading {
+  /* color: blue;   */
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0px 20px;
+  font-weight: 700;
+  background: -webkit-linear-gradient( rgb(41, 243, 182), rgb(66, 210, 249));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-toggler{
+  color: transparent !important;
+  background-color: white !important;
+}
+
+.details-card{
+  background-image: linear-gradient(to right,rgba(3,37,65,1) 50%, rgba(3,37,65,1) 100% );
+}
+
+.top-search-card{
+  background-image: url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg");
+  background-position: center;
+}
+
+.search_bar_btn{
+  background: -webkit-linear-gradient(left, rgb(77, 227, 182), rgb(66, 210, 249) ) !important;
+  border-radius: 1rem !important;
+  padding: 10px 30px !important;
+  margin: 2px !important;
+}
+

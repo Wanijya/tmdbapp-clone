@@ -63,7 +63,7 @@ const Footer = () => {
               className="text-decoration-none text-white"
               href="https://mdbootstrap.com/"
             >
-              SMDB
+              TMDB
             </a>
           </div>
         </footer>

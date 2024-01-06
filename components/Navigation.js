@@ -11,7 +11,6 @@ const Navigation = () => {
   const searchSubmitHandler = (event) => {
     event.preventDefault();
     router.push(`/searchResults/${searchMovie}`);
-    console.log("WANIJYA");
   };
   return (
     <nav className="nav navbar navbar-expand-lg bg-slate-800">

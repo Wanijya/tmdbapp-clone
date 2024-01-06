@@ -6,12 +6,6 @@ import { useRouter } from "next/navigation";
 
 const Navigation = () => {
   const router = useRouter();
-  const [searchMovie, setSearchMovie] = useState("");
-
-  const searchSubmitHandler = (event) => {
-    event.preventDefault();
-    router.push(`/searchResults/${searchMovie}`);
-  };
   return (
     <nav className="nav navbar navbar-expand-lg bg-slate-800">
       <div className="container-fluid">
@@ -163,14 +157,12 @@ const Navigation = () => {
               </a>
             </li>
           </ul>
-          <form onSubmit={searchSubmitHandler} className="d-flex" role="search">
+          <form className="d-flex" role="search">
             <input
               className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
-              value={searchMovie}
-              onChange={(e) => setSearchMovie(e.target.value)}
             />
             <button className="btn btn-outline-success" type="submit">
               Search

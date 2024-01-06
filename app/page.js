@@ -28,7 +28,6 @@ const page = () => {
   const router = useRouter();
   const [popularMovies, setpopularMovies] = useState([]);
   const [nowPlayingAxios, setnowPlaying] = useState([]);
-  const [searchMovie, setSearchMovie] = useState("");
 
   const getnowPlayingMovies = async () => {
     try {
@@ -54,12 +53,6 @@ const page = () => {
     getnowPlayingMovies();
   }, []);
 
-  const searchSubmitHandler = (event) => {
-    event.preventDefault();
-    router.push(`/searchResults/${searchMovie}`);
-    console.log("sudhanshu");
-  };
-
   return (
     <div className="d-flex flex-column align-items-center justify-content-center text-white">
       <div className="w-75 p-5 border border-primary d-flex flex-column gap-3 top-search-card">
@@ -69,7 +62,7 @@ const page = () => {
             Millions of movies, TV shows and people to discover. Explore now.
           </h2>
         </div>
-        <form onSubmit={searchSubmitHandler}>
+        <form>
           <div className="input-group">
             <input
               type="search"
